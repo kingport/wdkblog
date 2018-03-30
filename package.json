@@ -1,0 +1,39 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha",
+    "start": "NODE_ENV=production pm2 start index.js --name 'myblog'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config-lite": "2.1.0",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "2.0.1",
+    "ejs": "2.5.7",
+    "express": "4.16.3",
+    "express-formidable": "1.0.0",
+    "express-session": "1.15.6",
+    "express-winston": "2.5.0",
+    "marked": "0.3.17",
+    "moment": "2.21.0",
+    "mongolass": "4.1.3",
+    "mongoose": "5.0.11",
+    "objectid-to-timestamp": "1.3.0",
+    "semantic-ui": "2.3.1",
+    "sha1": "1.1.1",
+    "winston": "2.4.1"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "11.0.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-promise": "3.7.0",
+    "eslint-plugin-standard": "3.0.1",
+    "mocha": "5.0.5",
+    "supertest": "3.0.0"
+  }
+}
