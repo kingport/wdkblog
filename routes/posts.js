@@ -6,6 +6,8 @@ const CommentModel = require('../models/comments')
 
 const checkLogin = require('../middlewares/check').checkLogin //未登陆的时候
 
+router.use(checkLogin)
+
 // GET /posts  所有用户或者特定的用户的文章页面
 // eg GET/posts?author=xxx
 router.get('/', function (req,res,next) {
@@ -21,7 +23,7 @@ router.get('/', function (req,res,next) {
 })
 
 // POST /posts/create 发表一篇文章
-router.post('/create',checkLogin, function (req,res,next) {
+router.post('/create', function (req,res,next) {
     const author = req.session.user._id
     const title = req.fields.title
     const content = req.fields.content
@@ -57,7 +59,7 @@ router.post('/create',checkLogin, function (req,res,next) {
 })
 
 // GET /posts/create 发表文章页
-router.get('/create', checkLogin,function (req,res,next) {
+router.get('/create',function (req,res,next) {
   res.render('create')
 })
 
@@ -86,7 +88,7 @@ router.get('/:postId', function (req,res,next) {
 })
 
 // GET /posts/:postId/edit 跟新文章页面
-router.get('/:postId/edit',checkLogin,function (req,res,next) {
+router.get('/:postId/edit',function (req,res,next) {
   const postId = req.params.postId
   const author = req.session.user._id
 
@@ -106,7 +108,7 @@ router.get('/:postId/edit',checkLogin,function (req,res,next) {
 })
 
 // POST /posts/:postId/edit 跟新一篇文章
-router.post('/:postId/edit',checkLogin,function (req,res,next) {
+router.post('/:postId/edit',function (req,res,next) {
   const postId = req.params.postId
   const author = req.session.user._id
   const title = req.fields.title
@@ -148,7 +150,7 @@ router.post('/:postId/edit',checkLogin,function (req,res,next) {
 })
 
 // GET /posts/: postId/remove
-router.get('/:postId/remove', checkLogin, function (req,res,next) {
+router.get('/:postId/remove', function (req,res,next) {
   const postId = req.params.postId
   const author = req.session.user._id
 

@@ -1,6 +1,8 @@
 
+const checkLogin = require('../middlewares/check').checkLogin
+
 module.exports = function (app) {
-  app.get('/', function (req, res) {
+  app.get('/', checkLogin, function (req, res) {
     res.redirect('/posts')
   })
   app.use('/signup', require('./signup'))
