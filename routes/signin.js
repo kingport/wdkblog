@@ -28,7 +28,7 @@ router.post('/',checkNotLogin, function (req,res,next) {
   }
   catch (e) {
     req.flash('error', e.message)
-    return req.redirect('back')
+    return res.redirect('back')
   }
 
   UserModel.getUserByName(name)

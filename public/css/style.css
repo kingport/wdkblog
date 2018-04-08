@@ -5,7 +5,9 @@ body {
   height: 100%;
   margin: 0 auto;
   padding-top: 40px;
-  background: url('../img/1522823832275.jpg') no-repeat;
+  background: url('../img/1522823832275.jpg')  no-repeat ;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a:hover {
@@ -81,3 +83,4 @@ a:hover {
 .ui.button {
   margin-top: 15px;
 }
+
