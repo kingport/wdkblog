@@ -156,3 +156,10 @@
 
 --      删除留言: GET/comments/:commentId/remove
 
+
+## 启动
+-- node index.js
+## 数据库连接
+-- mongo 
+
+## 3000端口 http://127.0.0.1:3000/

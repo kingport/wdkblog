@@ -5,7 +5,7 @@ body {
   height: 100%;
   margin: 0 auto;
   padding-top: 40px;
-  background: url('../img/1522823832275.jpg')  no-repeat ;
+  background: url('../img/city.jpg')  no-repeat ;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -18,12 +18,22 @@ a:hover {
   background-color: #4fc08d !important;
   color: #fff !important;
 }
-
+.resgin {
+  background: #000 !important;
+  opacity: .7;
+}
 .avatar {
   border-radius: 3px;
   width: 48px;
   height: 48px;
   float: right;
+}
+.ui.segment:last-child {
+  background: none;
+  border: none;
+}
+.eight.wide.column {
+  background: #fff;
 }
 
 /* ---------- nav ---------- */
@@ -35,9 +45,10 @@ a:hover {
 }
 
 .nav h1 {
-  color: #4fc08d;
+  color: #000;
   display: inline-block;
   margin: 10px 0;
+  opacity: .8;
 }
 
 /* ---------- nav-setting ---------- */

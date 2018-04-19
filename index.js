@@ -12,7 +12,7 @@ const expressWinston = require('express-winston')
 
 const app = express()
 
-// 设置模版目录
+// 设置模版存放目录 第一个参数必须是views
 app.set('views', path.join(__dirname, 'views'))
 // 设置模版引擎 ejs
 app.set('view engine', 'ejs')
@@ -86,19 +86,6 @@ app.use(expressWinston.errorLogger({
   ]
 }))
 
-// 监听端口，启动程序
-// app.listen(config.port, function () {
-//   console.log('====================================');
-//   console.log(`${pkg.name} listening on port ${config.port}`);
-//   console.log('====================================');
-//   app.use(function (err,req,res,next) {
-//     console.log('====================================');
-//     console.log(err);
-//     console.log('====================================');
-//       req.flash('error', err.message)
-//       res.redirect('/posts')
-//   })
-// })
 
 if (module.parent) {
   // 被 require，则导出 app
